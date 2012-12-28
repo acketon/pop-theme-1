@@ -1,0 +1,11 @@
+
+@font-face {
+  font-family: 'Cubano-Regular';
+  src: url('Cubano-Regular.eot'); /* IE9 Compat Modes */
+  src: url('Cubano-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Cubano-Regular.woff') format('woff'), /* Modern Browsers */
+       url('Cubano-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Cubano-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}

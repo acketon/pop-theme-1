@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Name of yur theme -->
+  <title>My New Theme</title>
+  <!-- Add any styles your theme requires here -->
+  <link rel="stylesheet" href="/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+  <link rel="stylesheet/less" type="text/css" href="/fonts/cubano/stylesheet.css">
+  <link rel="stylesheet/less" type="text/css" href="/styles/main.less">
+  <!-- This script loads the Populr theming engine. Populr will automatically 
+       remove it at runtime. -->
+  <script src="http://populr.me/assets/developers/themer.js"></script>
+  <!-- Add any javscript your theme requires here -->
+  <script src="/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <script src="/js/main.js"></script>
+
+</head>
+<body>
+  <!-- Put your theme's inside this script tag. The script tag will 
+       prevent issues with quote escaping and invalid markup. -->
+  <script id="theme" type="text/x-handlebars-template">
+  <!--[if lt IE 7 ]> <div class="ie6"> <![endif]-->
+  <!--[if IE 7 ]>    <div class="ie7"> <![endif]-->
+  <!--[if IE 8 ]>    <div class="ie8"> <![endif]-->
+  <!--[if IE 9 ]>    <div class="ie9"> <![endif]-->
+  
+    <div class="title-area">
+      {{{title}}}
+    </div>
+    <div class="lightregion">
+      {{#region "columnizer" id="main-region" max_cols="4" max_auto_assets="0" dummy_content="T-1|T-1,T-2|T-1,T-2,T-3|T-1,T-2,T-3,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|I-1,I-2,I-3,I-1|V-1|V-2|V-1,V-2|V-1,V-2,V-3|V-1,V-2,V-3,V-1|D-1|D-3|D-1,D-3|D-1,D-2,D-3|D-1,D-2,D-3,D-1|E-1|E-2|E-1,E-2|E-1,E-2,E-3|E-1,E-2,E-3,E-1"}}
+          {{#asset "text" size="1"}}
+            <div class="divider-ornate"></div>
+              {{{title}}}
+              {{{body}}}
+
+          {{/asset}}
+          {{#asset "text" size="2"}}
+            {{{title}}}
+            {{{body}}}
+          {{/asset}}
+          {{#asset "text" size="3"}}
+            {{{title}}}
+            {{{body}}}
+          {{/asset}}
+          {{#asset "text" size="4"}}
+            {{{title}}}
+            {{{body}}}
+          {{/asset}}
+          
+          {{#asset "imagegroup" size="1"}}
+            <div class="divider-ornate"></div>
+            <div class="blue-frame">
+              <div class="blue-frame-inner">
+                  <div class="image-inner">
+                    {{#if_many images}}
+                      <div class="slideshow">
+                        <div class="images">
+                        {{#each images}}
+                          <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=370 height=370}}}" width="370" height="370" /></a>
+                        {{/each}}
+                        </div>
+                      </div>
+                    {{else}}
+                      {{#each images}}
+                        <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=370 height=370}}}" width="370" /></a>
+                      {{/each}}
+                    {{/if_many}}
+                  </div>
+                <div class="image-text">
+                  {{{title}}}
+                  {{{description}}}
+                </div>
+
+              </div>
+            </div>
+          {{/asset}}
+          {{#asset "imagegroup" size="2"}}
+            <div class="image-container wrap-anchor">
+             <div class="image-title">
+              {{{title}}}
+             </div>
+             <div class="image-inner">
+              {{#if_many images}}
+                <div class="slideshow">
+                  <div class="images">
+                  {{#each images}}
+                    <a href="{{{original_url}}}" class="fancybox_group slide-image">
+                      <img alt="{{{title}}}" src="{{{resize original_url width=440 height=280}}}" width="440" height="280" /></a>
+                  {{/each}}
+                  </div>
+                </div>
+              {{else}}
+                {{#each images}}
+                  <a href="{{{original_url}}}" class="fancybox single-image">
+                    <img alt="{{{title}}}" src="{{{resize original_url width=440 height=280}}}" width="440" height="280" /></a>
+                {{/each}}
+              {{/if_many}}
+            </div>
+            </div>
+            {{{description}}}
+          {{/asset}}
+          {{#asset "imagegroup" size="3"}}
+            <div class="image-inner">
+              {{#if_many images}}
+                <div class="slideshow">
+                  <div class="images">
+                  {{#each images}}
+                    <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=257 height=257}}}" width="257" height="257"/></a>
+                  {{/each}}
+                  </div>
+                </div>
+              {{else}}
+                {{#each images}}
+                  <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=257}}}" width="257" /></a>
+                {{/each}}
+              {{/if_many}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+
+          {{#asset "imagegroup" size="4"}}
+            <div class="image-inner">
+              {{#if_many images}}
+                <div class="slideshow">
+                  <div class="images">
+                    {{#each images}}
+                      <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=210 height=210}}}" width="210" height="210"/></a>
+                    {{/each}}
+                  </div>
+                </div>
+              {{else}}
+                {{#each images}}
+                  <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=210}}}" width="210"  /></a>
+                {{/each}}
+              {{/if_many}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+
+          {{#asset "videogroup" size="1"}}
+            <div class="video-container">
+              {{{videoplayer videos width="930" height="523" resolution="large"}}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "videogroup" size="2"}}
+            <div class="video-container">
+              {{{videoplayer videos width="440" height="248" resolution="medium"}}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "videogroup" size="3"}}
+            <div class="video-container">
+              {{{videoplayer videos width="257" height="143" resolution="small"}}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "videogroup" size="4"}}
+            <div class="video-container">
+              {{{videoplayer videos width="210" height="118" resolution="small"}}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+
+          {{#asset "documentgroup" size="1"}}
+            {{{title}}}
+            <ul class="documents">
+            {{#each documents}}
+              <li>
+              <div class="document-item">
+                <a href="{{{original_url}}}" data-tooltipsy-content="{{{source_file_name}}} ({{{format_file_size source_file_size}}})">
+                  <div class="title">
+                    <div class="extension extension-{{{extension}}}">
+                      {{{extension}}}
+                    </div>
+                    {{{title}}}
+                  </div>
+                  <div class="document-download">
+                    <div class="download">download</div>
+                  </div>
+                </a>
+              </div>
+              </li>
+            {{/each}}
+            </ul>
+            {{{description}}}
+          {{/asset}}
+          {{#asset "documentgroup" size="2"}}
+            {{{title}}}
+            <ul class="documents">
+            {{#each documents}}
+              <li>
+              <div class="document-item">
+                <a href="{{{original_url}}}" data-tooltipsy-content="{{{source_file_name}}} ({{{format_file_size source_file_size}}})">
+                  <div class="title">
+                    <div class="extension extension-{{{extension}}}">
+                      {{{extension}}}
+                    </div>
+                    {{{title}}}
+                  </div>
+                  <div class="document-download">
+                    <div class="download">download</div>
+                  </div>
+                </a>
+              </div>
+              </li>
+            {{/each}}
+            </ul>
+            {{{description}}}
+          {{/asset}}
+          {{#asset "documentgroup" size="3"}}
+            {{{title}}}
+            <ul class="documents">
+            {{#each documents}}
+              <li>
+              <div class="document-item">
+                <a href="{{{original_url}}}" data-tooltipsy-content="{{{source_file_name}}} ({{{format_file_size source_file_size}}})">
+                  <div class="title">
+                    <div class="extension extension-{{{extension}}}">
+                      {{{extension}}}
+                    </div>
+                    {{{title}}}
+                  </div>
+                  <div class="document-download">
+                    <div class="download">download</div>
+                  </div>
+                </a>
+              </div>
+              </li>
+            {{/each}}
+            </ul>
+            {{{description}}}
+          {{/asset}}
+          {{#asset "documentgroup" size="4"}}
+            {{{title}}}
+            <ul class="documents">
+            {{#each documents}}
+              <li>
+                <div class="document-item">
+                <a href="{{{original_url}}}" data-tooltipsy-content="{{{source_file_name}}} ({{{format_file_size source_file_size}}})">
+                  <div class="title">
+                    {{{title}}}
+                  </div>
+                  <div class="document-download">
+                    <div class="download">download</div>
+                  </div>
+                </a>
+                </div>
+              </li>
+            {{/each}}
+            </ul>
+            {{{description}}}
+          {{/asset}}
+          {{#asset "embedgroup" size="1" width="940"}}
+            {{#each embeds}}
+              <div class="embedded-container">
+                {{{html}}}
+              </div>
+            {{/each}}
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "embedgroup" size="2" width="450"}}
+            {{#each embeds}}
+              <div class="embedded-container">
+                {{{html}}}
+              </div>
+            {{/each}}
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "embedgroup" size="3" width="267"}}
+            {{#each embeds}}
+              <div class="embedded-container">
+                {{{html}}}
+              </div>
+            {{/each}}
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "embedgroup" size="4" width="220"}}
+            {{#each embeds}}
+              <div class="embedded-container">
+                {{{html}}}
+              </div>
+            {{/each}}
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+      {{/region}}
+    </div>
+
+
+
+    <div class="darkregion">
+      
+      {{#region "columnizer" id="footer-region" max_cols="4" dummy_content="T-1|T-1,T-2|T-1,T-2,T-3|T-1,T-2,T-3,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|I-1,I-2,I-3,I-1|V-1|V-2|V-1,V-2|V-1,V-2,V-3|V-1,V-2,V-3,V-1|D-1|D-3|D-1,D-3|D-1,D-2,D-3|D-1,D-2,D-3,D-1|E-1|E-2|E-1,E-2|E-1,E-2,E-3|E-1,E-2,E-3,E-1"}}
+          {{#asset "text" size="1"}}
+            <div class="divider-ornate"></div>
+              {{{title}}}
+              {{{body}}}
+
+          {{/asset}}
+          {{#asset "text" size="2"}}
+            {{{title}}}
+            {{{body}}}
+          {{/asset}}
+          {{#asset "text" size="3"}}
+            {{{title}}}
+            {{{body}}}
+          {{/asset}}
+          {{#asset "text" size="4"}}
+            {{{title}}}
+            {{{body}}}
+          {{/asset}}
+          
+          {{#asset "imagegroup" size="1"}}
+            <div class="divider-ornate"></div>
+            <div class="image-inner">
+              <div class="frame wrap-anchor">
+                <div class="frame-inner">
+                  {{#if_many images}}
+                    <div class="slideshow">
+                      <div class="images">
+                      {{#each images}}
+                        <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=930 height=396}}}" width="930" height="396" /></a>
+                      {{/each}}
+                      </div>
+                    </div>
+                  {{else}}
+                    {{#each images}}
+                      <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=930 height=396}}}" width="930" height="396"  /></a>
+                    {{/each}}
+                  {{/if_many}}
+                  <div class="image-text">
+                      <div class="image-title">{{{title}}}</div>
+                      <div class="caption">{{{description}}}</div>
+                  </div>
+                  <div class="frame-mask"></div>
+                </div>
+              </div>
+            </div>
+          {{/asset}}
+          {{#asset "imagegroup" size="2"}}
+            <div class="image-inner">
+              <div class="image-container wrap-anchor">
+               <div class="image-title">
+                {{{title}}}
+               </div>
+              {{#if_many images}}
+                <div class="slideshow">
+                  <div class="images">
+                  {{#each images}}
+                    <a href="{{{original_url}}}" class="fancybox_group slide-image">
+                      <img alt="{{{title}}}" src="{{{resize original_url width=440 height=280}}}" width="440" height="280" /></a>
+                  {{/each}}
+                  </div>
+                </div>
+              {{else}}
+                {{#each images}}
+                  <a href="{{{original_url}}}" class="fancybox single-image">
+                    <img alt="{{{title}}}" src="{{{resize original_url width=440 height=280}}}" width="440" height="280" /></a>
+                {{/each}}
+              {{/if_many}}
+              </div>
+            </div>
+            {{{description}}}
+          {{/asset}}
+          {{#asset "imagegroup" size="3"}}
+            <div class="image-inner">
+              {{#if_many images}}
+                <div class="slideshow">
+                  <div class="images">
+                  {{#each images}}
+                    <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=257 height=257}}}" width="257" height="257"/></a>
+                  {{/each}}
+                  </div>
+                </div>
+              {{else}}
+                {{#each images}}
+                  <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=257}}}" width="257" /></a>
+                {{/each}}
+              {{/if_many}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+
+          {{#asset "imagegroup" size="4"}}
+            <div class="image-inner">
+              {{#if_many images}}
+                <div class="slideshow">
+                  <div class="images">
+                    {{#each images}}
+                      <a href="{{{original_url}}}" class="fancybox_group slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=210 height=210}}}" width="210" height="210"/></a>
+                    {{/each}}
+                  </div>
+                </div>
+              {{else}}
+                {{#each images}}
+                  <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=210}}}" width="210"  /></a>
+                {{/each}}
+              {{/if_many}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+
+          {{#asset "videogroup" size="1"}}
+            <div class="video-container">
+              {{{videoplayer videos width="930" height="523" resolution="large"}}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "videogroup" size="2"}}
+            <div class="video-container">
+              {{{videoplayer videos width="440" height="248" resolution="medium"}}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "videogroup" size="3"}}
+            <div class="video-container">
+              {{{videoplayer videos width="257" height="143" resolution="small"}}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "videogroup" size="4"}}
+            <div class="video-container">
+              {{{videoplayer videos width="210" height="118" resolution="small"}}}
+            </div>
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+
+          {{#asset "documentgroup" size="1"}}
+            {{{title}}}
+            <ul class="documents">
+            {{#each documents}}
+              <li>
+              <div class="document-item">
+                <a href="{{{original_url}}}" data-tooltipsy-content="{{{source_file_name}}} ({{{format_file_size source_file_size}}})">
+                  <div class="title">
+                    <div class="extension extension-{{{extension}}}">
+                      {{{extension}}}
+                    </div>
+                    {{{title}}}
+                  </div>
+                  <div class="document-download">
+                    <div class="download">download</div>
+                  </div>
+                </a>
+              </div>
+              </li>
+            {{/each}}
+            </ul>
+            {{{description}}}
+          {{/asset}}
+          {{#asset "documentgroup" size="2"}}
+            {{{title}}}
+            <ul class="documents">
+            {{#each documents}}
+              <li>
+              <div class="document-item">
+                <a href="{{{original_url}}}" data-tooltipsy-content="{{{source_file_name}}} ({{{format_file_size source_file_size}}})">
+                  <div class="title">
+                    <div class="extension extension-{{{extension}}}">
+                      {{{extension}}}
+                    </div>
+                    {{{title}}}
+                  </div>
+                  <div class="document-download">
+                    <div class="download">download</div>
+                  </div>
+                </a>
+              </div>
+              </li>
+            {{/each}}
+            </ul>
+            {{{description}}}
+          {{/asset}}
+          {{#asset "documentgroup" size="3"}}
+            {{{title}}}
+            <ul class="documents">
+            {{#each documents}}
+              <li>
+              <div class="document-item">
+                <a href="{{{original_url}}}" data-tooltipsy-content="{{{source_file_name}}} ({{{format_file_size source_file_size}}})">
+                  <div class="title">
+                    <div class="extension extension-{{{extension}}}">
+                      {{{extension}}}
+                    </div>
+                    {{{title}}}
+                  </div>
+                  <div class="document-download">
+                    <div class="download">download</div>
+                  </div>
+                </a>
+              </div>
+              </li>
+            {{/each}}
+            </ul>
+            {{{description}}}
+          {{/asset}}
+          {{#asset "documentgroup" size="4"}}
+            {{{title}}}
+            <ul class="documents">
+            {{#each documents}}
+              <li>
+                <div class="document-item">
+                <a href="{{{original_url}}}" data-tooltipsy-content="{{{source_file_name}}} ({{{format_file_size source_file_size}}})">
+                  <div class="title">
+                    {{{title}}}
+                  </div>
+                  <div class="document-download">
+                    <div class="download">download</div>
+                  </div>
+                </a>
+                </div>
+              </li>
+            {{/each}}
+            </ul>
+            {{{description}}}
+          {{/asset}}
+          {{#asset "embedgroup" size="1" width="940"}}
+            {{#each embeds}}
+              <div class="embedded-container">
+                {{{html}}}
+              </div>
+            {{/each}}
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "embedgroup" size="2" width="450"}}
+            {{#each embeds}}
+              <div class="embedded-container">
+                {{{html}}}
+              </div>
+            {{/each}}
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "embedgroup" size="3" width="267"}}
+            {{#each embeds}}
+              <div class="embedded-container">
+                {{{html}}}
+              </div>
+            {{/each}}
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+          {{#asset "embedgroup" size="4" width="220"}}
+            {{#each embeds}}
+              <div class="embedded-container">
+                {{{html}}}
+              </div>
+            {{/each}}
+            {{{title}}}
+            {{{description}}}
+          {{/asset}}
+      {{/region}}
+    </div>
+    <div id="bg">
+      <div class="innerbg"></div>
+    </div>
+    </div> <!-- //ieclass -->
+  </script>
+</body>
+</html>
