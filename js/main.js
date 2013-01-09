@@ -26,7 +26,7 @@ $(document).on('pop-initialized', function(){
 
 
   $('#main-region .asset-type-imagegroup').live('initialize', function(e, asset){
-    alert("images initialized");
+    console.log("images initialized");
   });
 
   
