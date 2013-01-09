@@ -25,6 +25,20 @@ $(document).on('pop-initialized', function(){
 	});
 
 
+  $('.images').live('initialize', function(e, asset){
+    var el = e.currentTarget;
+ 	var $prevArrow = $('<a href="#" class="prev">Prev</a>').appendTo($(this).parents('.image-inner')); 
+	var $nextArrow = $('<a href="#" class="next">Next</a>').appendTo($(this).parents('.image-inner'));
+	$(this).cycle({ 
+	    fx:     'fade', 
+	    speed:  900, 
+	    timeout: 4000, 
+	    next:   $prevArrow, 
+	    prev:   $nextArrow
+	});
+  }
+
+
   $("a.fancybox").fancybox({
   	type: 'image'
   });
