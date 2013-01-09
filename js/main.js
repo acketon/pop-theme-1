@@ -28,9 +28,10 @@ $(document).on('pop-initialized', function(){
   $('#main-region .asset-type-imagegroup').live('initialize', function(e, asset){
     var el = e.currentTarget;
     var imagesWrap = $(el).find('.images');
+    imagesWrap.cycle('destroy');
   	var $prevArrow = $('<a href="#" class="prev">Prev</a>').appendTo($(this).find('.image-inner')); 
 	var $nextArrow = $('<a href="#" class="next">Next</a>').appendTo($(this).find('.image-inner'));
-	imagesWrap.cycle('destroy');
+	
 	imagesWrap.cycle({ 
 	    fx:     'fade', 
 	    speed:  900, 
