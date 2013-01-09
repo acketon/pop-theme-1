@@ -27,13 +27,12 @@ $(document).on('pop-initialized', function(){
 
   $('#main-region .asset-type-imagegroup').live('initialize', function(e, asset){
     alert("images initialized");
-  }
+  });
 
-  /*
+  
   $("a.fancybox").fancybox({
   	type: 'image'
   });
-*/
 
   $('.images').each(function(index){
   	$(this).find('a').attr("rel","group_"+index);
