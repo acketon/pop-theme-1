@@ -27,6 +27,18 @@ $(document).on('pop-initialized', function(){
 
   $('#main-region .asset-type-imagegroup').live('initialize', function(e, asset){
     console.log("images initialized");
+    var el = e.currentTarget;
+    console.log(el);
+    this = el.find('images');
+  	var $prevArrow = $('<a href="#" class="prev">Prev</a>').appendTo($(this).parents('.image-inner')); 
+	var $nextArrow = $('<a href="#" class="next">Next</a>').appendTo($(this).parents('.image-inner'));
+	$(this).cycle({ 
+	    fx:     'fade', 
+	    speed:  900, 
+	    timeout: 4000, 
+	    next:   $prevArrow, 
+	    prev:   $nextArrow
+	});
   });
 
   
