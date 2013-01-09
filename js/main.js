@@ -25,13 +25,13 @@ $(document).on('pop-initialized', function(){
 	});
 
 
-  $('#main-region .asset-type-imagegroup .images').live('initialize', function(e, asset){
-    console.log("images initialized");
+  $('#main-region .asset-type-imagegroup').live('initialize', function(e, asset){
+    console.log(e.currentTarget);
     var el = e.currentTarget;
-    console.log(el);
-  	var $prevArrow = $('<a href="#" class="prev">Prev</a>').appendTo($(this).parents('.image-inner')); 
-	var $nextArrow = $('<a href="#" class="next">Next</a>').appendTo($(this).parents('.image-inner'));
-	$(this).cycle({ 
+    var imagesWrap = $(el).find('images');
+  	var $prevArrow = $('<a href="#" class="prev">Prev</a>').appendTo($(this).find('.image-inner')); 
+	var $nextArrow = $('<a href="#" class="next">Next</a>').appendTo($(this).find('.image-inner'));
+	imagesWrap.cycle({ 
 	    fx:     'fade', 
 	    speed:  900, 
 	    timeout: 4000, 
