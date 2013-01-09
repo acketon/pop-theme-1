@@ -28,7 +28,7 @@ $(document).on('pop-initialized', function(){
   $('#main-region .asset-type-imagegroup').live('initialize', function(e, asset){
     console.log(e.currentTarget);
     var el = e.currentTarget;
-    var imagesWrap = $(el).find('images');
+    var imagesWrap = $(el).find('.images');
     console.log(imagesWrap);
   	var $prevArrow = $('<a href="#" class="prev">Prev</a>').appendTo($(this).find('.image-inner')); 
 	var $nextArrow = $('<a href="#" class="next">Next</a>').appendTo($(this).find('.image-inner'));
