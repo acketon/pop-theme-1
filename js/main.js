@@ -24,6 +24,20 @@ $(document).on('pop-initialized', function(){
 		});
 	});
 
+    function setupFancybox() {
+	  $("a.fancybox").fancybox({
+	  	type: 'image'
+	  });
+
+	  $('.images').each(function(index){
+	  	$(this).find('a').attr("rel","group_"+index);
+	  });
+	  $("a.fancybox_group").fancybox({
+	  	type: 'image'
+	  });
+	}
+	setupFancybox();
+
 
   $('#main-region .asset-type-imagegroup').live('initialize', function(e, asset){
     var el = e.currentTarget;
@@ -45,18 +59,7 @@ $(document).on('pop-initialized', function(){
 	    next:   $prevArrow, 
 	    prev:   $nextArrow
 	});
-  });
-
-  
-  $("a.fancybox").fancybox({
-  	type: 'image'
-  });
-
-  $('.images').each(function(index){
-  	$(this).find('a').attr("rel","group_"+index);
-  });
-  $("a.fancybox_group").fancybox({
-  	type: 'image'
+	setupFancybox();
   });
 
 
