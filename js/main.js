@@ -39,7 +39,7 @@ $(document).on('pop-initialized', function(){
 	setupFancybox();
 
 
-  $('#main-region .asset-type-imagegroup').live('initialize', function(e, asset){
+  $('.region .asset-type-imagegroup').live('initialize', function(e, asset){
     var el = e.currentTarget;
     var imagesWrap = $(el).find('.images');
     
