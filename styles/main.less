@@ -640,6 +640,10 @@ html .themed {
   &#pop {
   	font-family: Helvetica, Arial, san-serif;
   }
+
+
+
+
   h1#pop-title {
   	color:#fff;
   	font-size:85px;
@@ -664,6 +668,16 @@ html .themed {
   	font-size:14px;
   	line-height:1.6em;
   	text-align: left;
+  }
+
+  div.description a,
+  div.description a:active,
+  div.description a:visited {
+    color:@accent-color-link;
+  }
+  
+  div.description a:hover {
+    color:@accent-color-link-hover;
   }
 
 
@@ -720,6 +734,16 @@ html .themed {
   	color:@accent-color;
   	text-align:center;
   	margin:19px 0 34px 0;
+  }
+
+  h2.asset-title a,
+  h2.asset-title a:active,
+  h2.asset-title a:visited {
+    color:@accent-color-link;
+  }
+
+  h2.asset-title a:hover {
+    color:@accent-color-link-hover;
   }
 
   .columnizer-col2 .asset-type-videogroup h2.asset-title,
