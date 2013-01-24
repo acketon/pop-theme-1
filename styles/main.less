@@ -439,6 +439,12 @@ html .themed {
   	position: relative;
   	margin-bottom:12px;
   }
+
+  .video-container > *,
+  .embedded-container > *{
+    z-index:2;
+    position:relative;
+  }
   .populr-video-player,
   .embedded-container .embedded-object  {
   	border:5px solid white;
@@ -461,7 +467,7 @@ html .themed {
   	position: absolute;
   	left:0px;
   	top:0px;
-  	z-index:1;
+  	z-index:-1;
   	.box-shadow(0 0px 3px rgba(0,0,0,0.45));
   	-moz-transform: rotate(1.1deg);
 	-webkit-transform: rotate(1.1deg);
@@ -647,7 +653,7 @@ html .themed {
   div.body ul,
   div.description ol,
   div.body ol {
-    padding-left:35px;
+    padding-left:40px;
     margin-bottom:15px;
 
   }
@@ -665,7 +671,6 @@ html .themed {
   div.body ol li {
     list-style-type:decimal;
     line-height:1.6em;
-    margin-left:35px;
   }
 
 
