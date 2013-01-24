@@ -437,7 +437,7 @@ html .themed {
   .video-container,
   .embedded-container {
   	position: relative;
-  	margin-bottom:12px;
+  	margin-bottom:25px;
   }
 
   .video-container > *,
@@ -447,22 +447,23 @@ html .themed {
   }
   .populr-video-player,
   .embedded-container .embedded-object  {
-  	border:5px solid white;
+  	
   	position: relative;
   	z-index:2;
   	line-height:0;
   	.box-shadow(0 0px 3px rgba(0,0,0,0.75));
   }
 
-  .columnizer-col2 .populr-video-player,
-  .columnizer-col2 .embedded-container .embedded-object {
-    width:440px;
+  .embedded-container {
+    border:5px solid white;
   }
+  
 
   .populr-video-player > *,
   .embedded-container .embedded-object > * {
   	line-height: 1.1em;
   }
+  
   .video-container:after,
   .embedded-container:after {
   	content:'';
